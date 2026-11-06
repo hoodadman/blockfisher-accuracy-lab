@@ -1,0 +1,25 @@
+{
+  "name": "blockfisher-accuracy-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "In-house test of how often the v2 token scanner calls a token safe that later goes bad.",
+  "scripts": {
+    "fetch-v2": "bash scripts/fetch-v2.sh",
+    "build": "npm ci && bash scripts/fetch-v2.sh",
+    "daily": "tsx src/daily.ts",
+    "start": "tsx src/web.ts",
+    "typecheck": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "pg": "^8.23.1",
+    "tsx": "^4.23.15"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/pg": "^8.23.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}
